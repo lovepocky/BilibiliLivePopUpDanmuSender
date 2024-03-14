@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Chat Message Pop-up
-// @namespace    http://tampermonkey.net/
+// @namespace    https://github.com/Huaaudio/BilibiliLivePopUpDanmuSender
 // @version      1.0
 // @description  Creates a pop-up window for sending chat messages
 // @match        https://live.bilibili.com/*
