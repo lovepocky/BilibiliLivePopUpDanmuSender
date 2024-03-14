@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         Chat Message Sender
+// @name         摸鱼专用弹幕发送小窗口 BLive Chat Message Sender
 // @namespace    https://github.com/Huaaudio/BilibiliLivePopUpDanmuSender
 // @version      1.1
-// @description  Creates a pop-up window for sending chat messages
+// @description  Creates a pop-up window for viewing and sending Bilibili Live chat messages
 // @match        https://live.bilibili.com/*
 // @grant        none
 // ==/UserScript==
