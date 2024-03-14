@@ -1,8 +1,5 @@
 # BilibiliLivePopUpDanmuSender
 
-<!-- Language Switch -->
-[English](README.md) | [中文](README_CN.md)
-
 ## Description
 
 This Tampermonkey script allows users to create a pop-up window for sending chat messages in live streams on the website live.bilibili.com. It is especially useful when watching the stream in picture-in-picture mode.
@@ -15,5 +12,5 @@ To activate the pop-up window, press the shortcut key combination `Ctrl + B` whi
 
 1. Install the Tampermonkey extension for your browser.
 2. Click on the Tampermonkey icon in your browser's toolbar and choose "Create a new script".
-3. Copy and paste the code [here](https://github.com/Huaaudio/BilibiliLivePopUpDanmuSender/blob/main/userscript.js) in your editor.
+3. Copy and paste the [code](https://github.com/Huaaudio/BilibiliLivePopUpDanmuSender/blob/main/userscript.js) into the editor.
 4. Press `Ctrl + B` to activate the window, you can also change the key combination in line 130. Enjoy it!
