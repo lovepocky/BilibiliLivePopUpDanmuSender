@@ -7,7 +7,7 @@ This Tampermonkey script allows users to create a pop-up window for sending chat
 
 ## Usage
 
-To activate the pop-up window, press the shortcut key combination `Ctrl + B` while on the live.bilibili.com website. This will open the pop-up window where you can type and send chat messages.
+To activate the pop-up window, press the shortcut key combination `Ctrl + B` while on the live.bilibili.com website. This will open the pop-up window where you can type and send chat messages. Please notice that this script will only work if you have logged in your own Bilibili account in the browser.
 
 ## Installation
 

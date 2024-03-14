@@ -8,10 +8,9 @@
 ## 功能特性
 
 - 进入直播间页面之后按`Ctrl + B` 激活。最新的弹幕会显示在最上方。
+- 请注意，这个脚本默认您拥有并已经在浏览器登上了一个哔哩哔哩账户，不然弹幕是没法发的。
 
 ## 安装
-
-### 步骤 1
 
 1. 安装浏览器插件Tampermonkey。
 2. 在Tampermonkey中创建新的用户脚本，复制粘贴[这里](https://github.com/Huaaudio/BilibiliLivePopUpDanmuSender/blob/main/userscript.js)的代码。
