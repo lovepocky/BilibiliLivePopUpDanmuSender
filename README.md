@@ -14,5 +14,5 @@ To activate the pop-up window, press the shortcut key combination `Ctrl + B` whi
 
 1. Install the Tampermonkey extension for your browser.
 2. Click on the Tampermonkey icon in your browser's toolbar and choose "Create a new script".
-3. Copy and paste the code below into the editor.
+3. Copy and paste the code into the editor.
 4. Enjoy it!
