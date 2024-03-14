@@ -11,7 +11,7 @@
 ### 步骤 1
 
 1. 安装浏览器插件Tampermonkey。
-2. 在Tampermonkey中创建新的用户脚本，复制粘贴[这里](https://github.com/Huaaudio/BilibiliLivePopUpDanmuSender/releases)的代码。
+2. 在Tampermonkey中创建新的用户脚本，复制粘贴[这里](https://github.com/Huaaudio/BilibiliLivePopUpDanmuSender/blob/main/userscript.js)的代码。
 3. 按`Ctrl + B`激活脚本，你也可以在第130行修改自己想要的热键。
 4. 大功告成！
 
