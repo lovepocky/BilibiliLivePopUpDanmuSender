@@ -15,5 +15,5 @@ To activate the pop-up window, press the shortcut key combination `Ctrl + B` whi
 
 1. Install the Tampermonkey extension for your browser.
 2. Click on the Tampermonkey icon in your browser's toolbar and choose "Create a new script".
-3. Copy and paste the code [here] (https://github.com/Huaaudio/BilibiliLivePopUpDanmuSender/blob/main/userscript.js) in your editor.
+3. Copy and paste the code [here](https://github.com/Huaaudio/BilibiliLivePopUpDanmuSender/blob/main/userscript.js) in your editor.
 4. Press `Ctrl + B` to activate the window, you can also change the key combination in line 130. Enjoy it!
