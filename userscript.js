@@ -110,11 +110,17 @@
 
     // Function to handle messages from the pop-up window
     function handleMessage(event) {
-        const message = event.data;
+        let message = event.data;
+    
+        // Ensure the message is a string
+        if (typeof message !== 'string') {
+            message = JSON.stringify(message);
+        }
+    
         const chatInput = document.querySelector('textarea.chat-input.border-box');
         chatInput.value = message;
         chatInput.dispatchEvent(new Event('input', { bubbles: true }));
-
+    
         // Simulate pressing the Enter key
         const enterKeyEvent = new KeyboardEvent('keydown', {
             key: 'Enter',
@@ -124,6 +130,7 @@
         });
         chatInput.dispatchEvent(enterKeyEvent);
     }
+    
 
     // Open the pop-up window on a specific key press (e.g., Ctrl + M)
     document.addEventListener('keydown', function(event) {
