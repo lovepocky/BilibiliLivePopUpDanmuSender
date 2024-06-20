@@ -11,6 +11,42 @@
 body { background-color: rgba(0, 0, 0, 0); }
 
 
+/* Input and Send Area */
+#inputContainer {
+  display: flex;
+  align-items: center;
+  background-color: rgb(245, 243, 242);
+  border-top-left-radius: calc(var(--1px) * 4);
+  border-top-right-radius: calc(var(--1px) * 10);
+  border-bottom-left-radius: calc(var(--1px) * 4);
+  border-bottom-right-radius: calc(var(--1px) * 10);
+  padding: calc(var(--1px) * 8) calc(var(--1px) * 16);
+  margin-bottom: calc(var(--1px) * 10);
+}
+
+#inputField {
+  flex: 1;
+  border: none;
+  background-color: transparent;
+  font-size: calc(var(--1px) * 16);
+  line-height: calc(var(--1px) * 24);
+  padding: calc(var(--1px) * 4) calc(var(--1px) * 8);
+  color: var(--text);
+}
+
+#sendButton {
+  background-color: var(--bg);
+  color: #fff;
+  border: none;
+  border-radius: calc(var(--1px) * 4);
+  font-size: calc(var(--1px) * 14.5);
+  line-height: calc(var(--1px) * 14.5);
+  font-weight: 500;
+  padding: calc(var(--1px) * 6) calc(var(--1px) * 12);
+  margin-left: calc(var(--1px) * 8);
+  cursor: pointer;
+}
+
 /*** 全局设定 ***/
 /** 字体设定 **/
 /* 建议使用免费可商用字体、避免版权问题 */
