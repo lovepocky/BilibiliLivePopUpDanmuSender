@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         摸鱼专用弹幕发送小窗口 BLive Chat Message Sender
 // @namespace    https://github.com/Huaaudio/BilibiliLivePopUpDanmuSender
-// @version      1.1
+// @version      1.2
 // @description  Creates a pop-up window for viewing and sending Bilibili Live chat messages
 // @match        https://live.bilibili.com/*
 // @grant        none
@@ -25,11 +25,44 @@
                         padding: 10px;
                     }
                     #inputContainer {
-                        margin-bottom: 10px;
+                    display: flex;
+                    align-items: center;
+                    background-color: rgb(245, 243, 242);
+                    border-top-left-radius: calc(var(--1px) * 4);
+                    border-top-right-radius: calc(var(--1px) * 10);
+                    border-bottom-left-radius: calc(var(--1px) * 4);
+                    border-bottom-right-radius: calc(var(--1px) * 10);
+                    padding: calc(var(--1px) * 8) calc(var(--1px) * 16);
+                    margin-bottom: calc(var(--1px) * 10);
                     }
+
                     #inputField {
-                        width: 200px;
-                        margin-right: 10px;
+                    flex: 1;
+                    border: none;
+                    background-color: transparent;
+                    font-size: calc(var(--1px) * 16);
+                    line-height: calc(var(--1px) * 24);
+                    padding: calc(var(--1px) * 8) calc(var(--1px) * 8);
+                    color: var(--text);
+                    height: calc(var(--1px) * 40); /* Set a fixed height for the input field */
+                    }
+
+                    #sendButton {
+                        background-color: #23ade5;
+                        color: #fff;
+                        border-radius: 4px
+                        position: relative;
+                        box-sizing: border-box;
+                        line-height: 1;
+                        margin: 0;
+                        padding: 6px 12px;
+                        border: 0;
+                        cursor: pointer;
+                        outline: 0;
+                        overflow: hidden;
+                        display: inline-flex;
+                        justify-content: center;
+                        align-items: center
                     }
                 </style>
             </head>
