@@ -16,7 +16,8 @@
     function createPopupWindow() {
         const currentURL = window.location.href;
         const roomId = currentURL.match(/live.bilibili.com\/(\d+)/)?.[1];
-        const chatRenderURL = `https://chat.vrp.moe/obs/${roomId}?altDanmakuLayout=false&autoHideEvent=0&baseFontSize=20&colorScheme=light&connectionMode=direct&customAvatarApi=&limitEventAmount=8&limitStickyAmount=10&loginSyncServer=&loginSyncToken=&showAutoDanmaku=false&showAvatar=true&showAvatarFrame=true&showCurrentRank=true&showDanmaku=true&showEnterEvent=false&showEnterEventCurrentGuardOnly=false&showFollowEvent=false&showGift=true&showGiftFree=false&showGiftHighlightAbove=29.99&showGiftPriceAbove=1&showGiftStickyAbove=29.99&showLottery=true&showMedal=false&showMedalLightenedOnly=true&showModBadge=true&showPhoneNotVerified=false&showRedEnvelop=true&showStickyBar=true&showSuperChat=true&showSystemMessage=true&showToast=true&showUserLevelAbove=0&showUserLvl=false&showUsername=true&showWealthMedal=false&useCst=false`;
+        const tokenId = null; //如果想的话就在这里设置你的拉普拉斯同步密钥 Place your Laplace Chat sync token here
+        const chatRenderURL = `https://chat.vrp.moe/obs/${roomId}?altDanmakuLayout=false&autoHideEvent=0&baseFontSize=20&colorScheme=light&connectionMode=direct&customAvatarApi=&limitEventAmount=8&limitStickyAmount=10&loginSyncServer=&loginSyncToken=${tokenId}&showAutoDanmaku=false&showAvatar=true&showAvatarFrame=true&showCurrentRank=true&showDanmaku=true&showEnterEvent=false&showEnterEventCurrentGuardOnly=false&showFollowEvent=false&showGift=true&showGiftFree=false&showGiftHighlightAbove=29.99&showGiftPriceAbove=1&showGiftStickyAbove=29.99&showLottery=true&showMedal=false&showMedalLightenedOnly=true&showModBadge=true&showPhoneNotVerified=false&showRedEnvelop=true&showStickyBar=true&showSuperChat=true&showSystemMessage=true&showToast=true&showUserLevelAbove=0&showUserLvl=false&showUsername=true&showWealthMedal=false&useCst=false`;
         popupWindow = window.open('', 'Chat Message Pop-up', 'width=400,height=400');
         popupWindow.document.write(`
             <html>
@@ -137,4 +138,18 @@
 
     // Listen for messages from the pop-up window
     window.addEventListener('message', handleMessage, false);
+
+    // Function to remove the masking div
+    function removeDivElement() {
+        const divToRemove = document.querySelector('.web-player-module-area-mask');
+        if (divToRemove) {
+            divToRemove.remove();
+            console.log('Div removed successfully');
+        } else {
+            console.log('Div not found');
+        }
+    }
+
+    // Run the function when the page loads
+    window.addEventListener('load', removeDivElement);
 })();
