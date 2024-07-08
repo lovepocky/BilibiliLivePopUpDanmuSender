@@ -3,7 +3,8 @@
 
 ## Description
 
-This Tampermonkey script allows users to create a pop-up window for sending chat messages in live streams on the website live.bilibili.com. It is especially useful when watching the stream in picture-in-picture mode.
+This Tampermonkey script allows users to create a pop-up window for sending chat messages in live streams on the website live.bilibili.com. It is especially useful when watching the stream in picture-in-picture mode. 
+Added a feature to remove the floating mask panel.
 
 ## Usage
 
