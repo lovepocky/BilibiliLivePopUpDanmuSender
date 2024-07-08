@@ -124,21 +124,6 @@
         chatInput.dispatchEvent(enterKeyEvent);
     }
 
-
-    // Open the pop-up window on a specific key press (e.g., Ctrl + M)
-    document.addEventListener('keydown', function(event) {
-        if (event.ctrlKey && event.key === 'b') {
-            if (popupWindow === null || popupWindow.closed) {
-                createPopupWindow();
-            } else {
-                popupWindow.focus();
-            }
-        }
-    });
-
-    // Listen for messages from the pop-up window
-    window.addEventListener('message', handleMessage, false);
-
     // Function to remove the masking div
     function removeDivElement() {
         const divToRemove = document.querySelector('.web-player-module-area-mask');
@@ -151,5 +136,21 @@
 
     // Run the function when the page loads
     window.addEventListener('load', removeDivElement);
-    setInterval(removeDivElement, 5000);
+
+    // Open the pop-up window on a specific key press (e.g., Ctrl + M)
+    document.addEventListener('keydown', function(event) {
+        if (event.ctrlKey && event.key === 'b') {
+            if (popupWindow === null || popupWindow.closed) {
+                createPopupWindow();
+                removeDivElement();
+            } else {
+                popupWindow.focus();
+                removeDivElement();
+            }
+        }
+    });
+
+    // Listen for messages from the pop-up window
+    window.addEventListener('message', handleMessage, false);
+
 })();
