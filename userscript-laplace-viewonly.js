@@ -38,8 +38,10 @@
         if (event.ctrlKey && event.key.toLowerCase() === 'b') {
             if (popupWindow === null || popupWindow.closed) {
                 createPopupWindow();
+                removeDivElement();
             } else {
                 popupWindow.focus();
+                removeDivElement();
             }
         }
     });
@@ -54,8 +56,7 @@
         }
     }
 
-        // Run the function when the page loads
+    // Run the function when the page loads
     window.addEventListener('load', removeDivElement);
-    setInterval(removeDivElement, 5000);
-
+    //setInterval(removeDivElement, 5000);
 })();
