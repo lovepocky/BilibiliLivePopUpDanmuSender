@@ -176,6 +176,19 @@
         }
     });
 
+        // Function to remove the masking div
+    function removeDivElement() {
+        const divToRemove = document.querySelector('.web-player-module-area-mask');
+        if (divToRemove) {
+            divToRemove.remove();
+            console.log('Div removed successfully');
+        } else {
+        }
+    }
+
+    // Run the function when the page loads
+    window.addEventListener('load', removeDivElement);
+    setInterval(removeDivElement, 5000);
     // Listen for messages from the pop-up window
     window.addEventListener('message', handleMessage, false);
 })();
