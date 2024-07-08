@@ -51,11 +51,11 @@
             divToRemove.remove();
             console.log('Div removed successfully');
         } else {
-            console.log('Div not found');
         }
     }
 
         // Run the function when the page loads
     window.addEventListener('load', removeDivElement);
+    setInterval(removeDivElement, 5000);
 
 })();
