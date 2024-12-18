@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         摸鱼专用弹幕发送小窗口 BLive Chat Message Sender
 // @namespace    https://github.com/Huaaudio/BilibiliLivePopUpDanmuSender
-// @version      1.2
+// @version      1.2-add-medal
 // @description  Creates a pop-up window for viewing and sending Bilibili Live chat messages
 // @match        https://live.bilibili.com/*
 // @grant        none
@@ -117,7 +117,8 @@
                 const message = item.getAttribute('data-danmaku');
 
                 const messageElement = popupDocument.createElement('div');
-                messageElement.innerHTML = `<strong>${sender}:</strong> ${message}`;
+                const medal = item.getElementsByClassName('wealth-medal')[0]
+                messageElement.innerHTML = ( medal?.outerHTML || '') + `<strong>${sender}:</strong> ${message}`;
 
                 // Check if the message already exists in the pop-up window
                 const messageExists = existingMessages.some(existingMessage => {
