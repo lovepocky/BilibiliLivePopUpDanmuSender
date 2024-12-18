@@ -118,7 +118,8 @@
 
                 const messageElement = popupDocument.createElement('div');
                 const medal = item.getElementsByClassName('wealth-medal')[0]
-                messageElement.innerHTML = ( medal?.outerHTML || '') + `<strong>${sender}:</strong> ${message}`;
+                const reply = item.getElementsByClassName('reply-uname')[0]
+                messageElement.innerHTML = ( medal?.outerHTML || '') + `<strong>${sender}:</strong> ${message}` + ( reply?.outerHTML || '');
 
                 // Check if the message already exists in the pop-up window
                 const messageExists = existingMessages.some(existingMessage => {
