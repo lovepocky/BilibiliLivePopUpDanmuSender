@@ -115,12 +115,13 @@
             chatItems.forEach(item => {
                 const sender = item.getAttribute('data-uname');
                 const message = item.getAttribute('data-danmaku');
+                const ts = item.getAttribute('data-timestamp');
 
                 const messageElement = popupDocument.createElement('div');
                 const medal = item.getElementsByClassName('wealth-medal')[0]
                 const reply = item.getElementsByClassName('reply-uname')[0]
                 const replyName = reply?.getElementsByTagName('div')?.[0]
-                messageElement.innerHTML = ( medal?.outerHTML || '') + `<strong>${sender}:</strong> ${message}` + ( replyName?  '<span style="color: #FB7299;"> @' + replyName.innerHTML + '</span>' :'');
+                messageElement.innerHTML = ( medal?.outerHTML || '') + `<strong ts="${ts}">${sender}:</strong> ${message}` + ( replyName?  '<span style="color: #FB7299;"> @' + replyName.innerHTML + '</span>' :'');
 
                 // Check if the message already exists in the pop-up window
                 const messageExists = existingMessages.some(existingMessage => {
