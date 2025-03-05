@@ -147,6 +147,10 @@
 
     // Function to handle messages from the pop-up window
     function handleMessage(event) {
+
+        // 只接受popupWindow发来的消息
+        if(event.source != popupWindow) return
+
         let message = event.data;
     
         // Ensure the message is a string
@@ -157,7 +161,7 @@
         const chatInput = document.querySelector('textarea.chat-input.border-box');
         chatInput.value = message;
         chatInput.dispatchEvent(new Event('input', { bubbles: true }));
-    
+
         // Simulate pressing the Enter key
         const enterKeyEvent = new KeyboardEvent('keydown', {
             key: 'Enter',
